@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* 3rd party imports */
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { jsx } from 'theme-ui';
 import { Flex } from '@theme-ui/components';
 
