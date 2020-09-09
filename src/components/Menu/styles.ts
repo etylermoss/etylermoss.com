@@ -23,7 +23,7 @@ const footer: SxStyleProp = {
 }
 
 const githubLink: SxStyleProp = {
-	color: 'primary',
+	color: 'link',
 	textDecoration: 'none',
 }
 
