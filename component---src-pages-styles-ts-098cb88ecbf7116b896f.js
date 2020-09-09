@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{dhzd:function(e,t,o){"use strict";o.r(t);t.default={portrait:{width:["14em","17em","20em"],float:["none","right","right"],margin:["0 auto 0 auto","0 0 0 1.5em","0 0 0 2em"]},greetings:{margin:"1em 0 0.3em 0",wordSpacing:"0.3em",fontSize:2,color:"primary"},title:{margin:0,a:{color:"text",textDecoration:"none"}}}}}]);
+//# sourceMappingURL=component---src-pages-styles-ts-098cb88ecbf7116b896f.js.map
