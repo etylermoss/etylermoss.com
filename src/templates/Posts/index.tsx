@@ -1,10 +1,13 @@
+/** @jsx jsx */
 /* 3rd party imports */
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
+import { jsx, Flex } from 'theme-ui';
 import { graphql } from 'gatsby';
 
 /* 1st party imports */
-import Layout from '../components/Layout';
-import SEO from '../components/SEO';
+import Layout from '@/components/Layout';
+import SEO from '@/components/SEO';
+import Styles from '@/templates/Posts/styles';
 
 interface Query {
 	data: {
@@ -22,20 +25,20 @@ interface Query {
 const Template: FunctionComponent<Query> = ({ data }) => {
 	const { markdownRemark } = data;
 	const { frontmatter, html } = markdownRemark;
+	const date = new Date(frontmatter.date);
 	
 	return (
 		<Layout>
 			<SEO title={frontmatter.title}/>
-			<div className="post">
-				<h1>{frontmatter.title}</h1>
-				<h2>{new Date(frontmatter.date).toLocaleDateString()}</h2>
-				<div
-				className="post-content"
-				dangerouslySetInnerHTML={{ __html: html }}
-				/>
-			</div>
+			<article>
+				<Flex sx={Styles.header}>
+					<h1 sx={Styles.headerTitle}>{frontmatter.title}</h1>
+					<time sx={Styles.headerTime} dateTime={date.toISOString()}>{new Date(frontmatter.date).toLocaleDateString()}</time>
+				</Flex>
+				<div dangerouslySetInnerHTML={{ __html: html }} />
+			</article>
 		</Layout>
-	)
+	);
 }
 
 export default Template;
