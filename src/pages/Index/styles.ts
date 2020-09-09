@@ -5,6 +5,13 @@ const portrait: SxStyleProp = {
 	width: ['14em', '17em', '20em'],
 	float: ['none', 'right', 'right'],
 	margin: ['0 auto 0 auto', '0 0 0 1.5em', '0 0 0 2em'],
+	borderRadius: '50%',
+	boxShadow: 'none',
+}
+
+const portraitDark: SxStyleProp = {
+	...portrait,
+	boxShadow: '0 0 15px -5px #9696F3',
 }
 
 const greetings: SxStyleProp = {
@@ -22,4 +29,4 @@ const title: SxStyleProp = {
 	},
 }
 
-export default { portrait, greetings, title };
+export default { portrait, portraitDark, greetings, title };

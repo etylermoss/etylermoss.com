@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* 3rd party imports */
 import { FunctionComponent } from 'react';
-import { jsx } from 'theme-ui';
+import { jsx, useColorMode } from 'theme-ui';
 
 /* 1st party imports */
 import useSiteMetadata from '@/hooks/useSiteMetadata';
@@ -14,13 +14,14 @@ import Styles from '@/pages/Index/styles';
 
 const Page: FunctionComponent = () => {
 	const { title } = useSiteMetadata();
+	const [colorMode] = useColorMode<'default' | 'dark'>();
 
 	return (
 		<Layout>
 			<SEO title="Home"/>
 			<main>
-				<Portrait sx={Styles.portrait}/>
-				<p sx={Styles.greetings}>Hello, Hola, Hallo</p>
+				<Portrait sx={colorMode === 'dark' ? Styles.portraitDark : Styles.portrait}/>
+				<p sx={Styles.greetings}>Hello, Hallo, Hola</p>
 				<h1 sx={Styles.title}>{title}.</h1>
 				<p>
 					I&apos;m a 19 year old student and programmer. I study Computer Science at the University

@@ -17,6 +17,7 @@ module.exports = {
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-cname',
+		'gatsby-plugin-theme-ui',
 		{
 			resolve: 'gatsby-plugin-page-creator',
 			options: {
