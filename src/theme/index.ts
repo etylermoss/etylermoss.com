@@ -10,5 +10,5 @@ export default {
 	...Fonts,
 	colors: Colors,
 	buttons: Buttons,
-	breakpoints: ['30em', '37em', '45em']
+	breakpoints: ['40rem', '60rem', '70rem'],
 } as Theme;

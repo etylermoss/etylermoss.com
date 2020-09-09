@@ -7,6 +7,7 @@ module.exports = {
 		author: 'Eden Tyler-Moss',
 		email: 'eden@etylermoss.com',
 		mobile: '+44 (0)7460 195524',
+		siteUrl: 'https://www.etylermoss.com',
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',
@@ -15,6 +16,14 @@ module.exports = {
 		'gatsby-transformer-remark',
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
+		'gatsby-plugin-cname',
+		{
+			resolve: 'gatsby-plugin-page-creator',
+			options: {
+				path: `${__dirname}/src/pages`,
+				ignore: ['**/styles.ts'],
+			},
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
@@ -38,7 +47,7 @@ module.exports = {
 				background_color: '#9696F3',
 				theme_color: '#9696F3',
 				display: 'minimal-ui',
-				icon: 'src/images/gatsby-icon.png',
+				icon: `${__dirname}/src/images/portrait.png`,
 			},
 		},
 		{
@@ -46,8 +55,8 @@ module.exports = {
 			options: {
 				google: {
 					families: ['Noto Sans:400,700', 'Ubuntu:400,700'],
-				}
-			}
+				},
+			},
 		},
 		{
 			resolve: 'gatsby-plugin-alias-imports',

@@ -1,7 +1,9 @@
 /* 3rd party imports */
 import React, { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+
+/* 1st party imports */
+import useSiteMetadata from '@/hooks/useSiteMetadata';
 
 interface Props {
 	description?: string;
@@ -11,19 +13,9 @@ interface Props {
 }
 
 const Component: FunctionComponent<Props> = ({ description = '', lang = 'en', meta = [], title }) => {
-	const { site } = useStaticQuery(graphql`
-		query {
-			site {
-				siteMetadata {
-					title
-					description
-					author
-				}
-			}
-		}
-	`);
+	const siteMetadata = useSiteMetadata();
 
-	const metaDescription = description || site.siteMetadata.description;
+	const metaDescription = description || siteMetadata.description;
 
 	return (
 		<Helmet
@@ -31,7 +23,7 @@ const Component: FunctionComponent<Props> = ({ description = '', lang = 'en', me
 				lang,
 			}}
 			title={title}
-			titleTemplate={`%s | ${site.siteMetadata.title}`}
+			titleTemplate={`%s | ${siteMetadata.title}`}
 			meta={[
 				{
 					name: 'description',
@@ -55,7 +47,7 @@ const Component: FunctionComponent<Props> = ({ description = '', lang = 'en', me
 				},
 				{
 					name: 'twitter:creator',
-					content: site.siteMetadata.author,
+					content: siteMetadata.author,
 				},
 				{
 					name: 'twitter:title',
@@ -69,9 +61,5 @@ const Component: FunctionComponent<Props> = ({ description = '', lang = 'en', me
 		/>
 	)
 }
-
-//SEO.propTypes = {
-//	meta: PropTypes.arrayOf(PropTypes.object),
-//}
 
 export default Component;
