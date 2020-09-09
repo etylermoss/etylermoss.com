@@ -54,7 +54,7 @@ const Component: FunctionComponent = () => {
 			<ol sx={Styles.list}>
 				{Posts.map(post =>
 					<li key={post.slug} sx={Styles.listItem}>
-						<Link to={`posts/${post.slug}`}>
+						<Link to={`/posts/${post.slug}`}>
 							{post.title}
 						</Link>
 						<p sx={Styles.listItemDescription}>
