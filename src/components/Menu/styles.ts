@@ -2,6 +2,7 @@
 import { SxStyleProp } from 'theme-ui';
 
 const container: SxStyleProp = {
+	minWidth: [ '72vw', '60vw', '34vw' ],
 	flexDirection: 'column',
 	boxSizing: 'border-box',
 	fontSize: '0.9em',

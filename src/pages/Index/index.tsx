@@ -1,30 +1,35 @@
+/** @jsx jsx */
 /* 3rd party imports */
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
+import { jsx } from 'theme-ui';
 
 /* 1st party imports */
+import useSiteMetadata from '@/hooks/useSiteMetadata';
 import Layout from '@/components/Layout';
 import SEO from '@/components/SEO';
-import Line from '@/components/Line';
+import Portrait from '@/components/Portrait';
+import Styles from '@/pages/Index/styles';
 
-const Page: FunctionComponent = () => (
-	<Layout>
-		<SEO title="Home" />
-		<main>
-				<h4>&lt;home&gt;</h4>
-				<Line/>
+// TODO: turn main content into a component, make Portrait like FeaturedImage
+
+const Page: FunctionComponent = () => {
+	const { title } = useSiteMetadata();
+
+	return (
+		<Layout>
+			<SEO title="Home"/>
+			<main>
+				<Portrait sx={Styles.portrait}/>
+				<p sx={Styles.greetings}>Hello, Hola, Hallo</p>
+				<h1 sx={Styles.title}>{title}.</h1>
 				<p>
 					I&apos;m a 19 year old student and programmer. I study Computer Science at the University
 					of Nottingham (2020 - 2024). Outside of education I tinker with electronics, programming,
-					photoshop / graphic design, and photography. For all my photography I use a Panasonic
-					DMC-G7, with my 14-42mm or 45-150mm lenses, as well as using a 10mm ext. tube for macro.
-					Previously I attended 6ᵗʰ Form at Crossley Heath Grammar School in Halifax, West Yorkshire.
+					graphic design, and photography.
 				</p>
-				<p>
-					This website is still a work in progress, you can see the source code on my Github page,
-					along with many other projects. Built using Gatsby and TypeScript.
-				</p>
-		</main>
-	</Layout>
-);
+			</main>
+		</Layout>
+	);
+};
 
 export default Page;

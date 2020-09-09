@@ -2,21 +2,12 @@
 import { Theme } from 'theme-ui';
 
 export default {
-	primary: {
+	header: {
 		color: 'text',
 		bg: 'background',
 		cursor: 'pointer',
 		'&:hover': {
-			color: 'primary'
-		}
-	},
-	menu: {
-		color: 'text',
-		bg: 'background',
-		cursor: 'pointer',
-		fontSize: '2em',
-		'&:hover': {
-			color: 'primary'
+			color: 'layoutLinkHover'
 		}
 	}
 } as Theme['buttons'];

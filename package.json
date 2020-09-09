@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Eden Tyler-Moss <eden@etylermoss.com>",
   "dependencies": {
+    "@browniebroke/gatsby-image-gallery": "^3.5.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
@@ -36,7 +37,10 @@
     "@typescript-eslint/parser": "^4.0.1",
     "eslint": "^7.8.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-cname": "^1.0.0",
+    "gatsby-plugin-page-creator": "^2.3.27",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gh-pages": "^3.1.0",
     "prettier": "2.1.0"
   },
   "keywords": [
@@ -46,6 +50,7 @@
   "scripts": {
     "build": "npm run type-check && gatsby build",
     "develop": "npm run type-check && gatsby develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

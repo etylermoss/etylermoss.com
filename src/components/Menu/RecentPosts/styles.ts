@@ -23,6 +23,9 @@ const listItem: SxStyleProp = {
 	mb: '0.8em',
 	'a': {
 		color: 'link',
+		':hover': {
+			color: 'linkHover',
+		},
 	},
 };
 

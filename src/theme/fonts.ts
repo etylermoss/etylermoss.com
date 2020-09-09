@@ -14,8 +14,4 @@ export default {
 		semibold: 500,
 		bold: 700,
 	},
-	letterSpacings: {
-		bold: 'normal',
-		prebold: '0.035em',
-	},
 } as Theme;

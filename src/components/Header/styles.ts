@@ -1,37 +1,39 @@
 /* 3rd party imports */
 import { SxStyleProp } from 'theme-ui';
 
-const container: SxStyleProp = {
+const header: SxStyleProp = {
 	display: 'flex',
-	fontSize: ['0.55em', '0.75em', '1em'],
+	flexGrow: 1,
+	fontSize: ['0.8em', '0.95em', '1em'],
 	alignItems: 'center',
-	boxShadow: '#aaa 0px -10px 6px 12px',
 	fontFamily: 'heading',
 	overflow: 'hidden',
-	width: '100%',
+	padding: ['0.5em', '0.8em', '1.1em'],
 };
 
-const title: SxStyleProp = {
-	margin: 0,
-	'a': {
-		color: 'primary',
-		textDecoration: 'none',
-	},
+const headerChild: SxStyleProp = {
+	flex: '1 0 0',
 }
 
-const pageLinksContainer: SxStyleProp = {
-	margin: '0 1.25em 0 auto',
+const menuButton: SxStyleProp = {
+	fontSize: '2em',
+}
+
+const shareLinks: SxStyleProp = {
+	justifyContent: 'flex-end',
+}
+
+const pageLinks: SxStyleProp = {
 	fontWeight: 'body',
+	justifyContent: 'center',
 	'a': {
 		margin: '0 0.4em 0 0.4em',
-		color: 'primary',
+		color: 'layoutLink',
 		textDecoration: 'none',
-		letterSpacing: 'prebold',
 		':hover': {
-			fontWeight: 'bold',
-			letterSpacing: 'bold'
+			color: 'layoutLinkHover',
 		}
 	}
 }
 
-export default { container, title, pageLinksContainer };
+export default { header, headerChild, menuButton, shareLinks, pageLinks };
