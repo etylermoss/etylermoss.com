@@ -2,7 +2,7 @@
 import { SxStyleProp } from 'theme-ui';
 
 const container: SxStyleProp = {
-	boxShadow: theme => `0 0 5px 0px ${theme.colors.shadow}`,
+	boxShadow: theme => `0 0 3px 0px ${theme.colors.shadow}`,
 	backgroundColor: 'background',
 };
 
@@ -10,15 +10,13 @@ const image: SxStyleProp = {
 	overflow: 'hidden',
 };
 
-const infoContainer = (forceDarkColorMode: boolean): SxStyleProp => ({
+const infoContainer: SxStyleProp = {
 	display: 'inline-block',
 	textDecoration: 'none',
 	padding: ['0.3em', '0.45em'],
-	color: theme => forceDarkColorMode ? theme.colors.modes.dark.bold : 'bold',
-});
-
-const headerContainer: SxStyleProp = {
-	margin: ['0em 0 0.65em 0', '0em 0 0.75em 0'],
+	color: 'cardText',
+	backgroundColor: 'card',
+	width: '100%',
 };
 
 const title: SxStyleProp = {
@@ -29,9 +27,4 @@ const date: SxStyleProp = {
 	margin: '0 0 0 auto',
 };
 
-const excerpt: SxStyleProp = {
-	margin: 0,
-	fontSize: '0.8em',
-};
-
-export default { container, image, infoContainer, headerContainer, title, date, excerpt };
+export default { container, image, infoContainer, title, date };

@@ -6,6 +6,8 @@ export default {
 	subtext: '#444',
 	bold: '#222',
 	background: '#fff',
+	card: '#fcfcfc',
+	cardText: '#222',
 	shadow: '#d2d2d2',
 	primary: '#9696f3',
 	secondary: '#4a4c6c',

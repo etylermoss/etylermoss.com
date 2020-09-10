@@ -6,6 +6,7 @@ export default {
 		color: 'text',
 		bg: 'background',
 		cursor: 'pointer',
+		outline: 'none',
 		'&:hover': {
 			color: 'layoutLinkHover'
 		}

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 /* 3rd party imports */
 import { FunctionComponent } from 'react';
-import { jsx, Flex } from 'theme-ui';
+import { jsx, SxStyleProp } from 'theme-ui';
 import { Link } from 'gatsby';
 import Image, { FluidObject } from 'gatsby-image';
 
@@ -12,24 +12,22 @@ interface Props {
 	info: {
 		slug: string;
 		title: string;
-		excerpt: string;
 		date: Date;
 	}
 	pathPrefix: string;
 	fluid: FluidObject;
 	forceDarkColorMode?: boolean;
+	imageSx?: SxStyleProp;
+	infoSx?: SxStyleProp;
 }
 
-const Component: FunctionComponent<Props> = ({ info, pathPrefix, fluid, forceDarkColorMode = false, ...intrinsic }) => (
+const Component: FunctionComponent<Props> = ({ info, pathPrefix, fluid, forceDarkColorMode = false, imageSx, infoSx, ...intrinsic }) => (
 	<div sx={{...Styles.container}} {...intrinsic}>
 		<Link to={`${pathPrefix}${info.slug}`}>
-			<Image fluid={fluid} sx={Styles.image}/>
-			<div sx={Styles.infoContainer(forceDarkColorMode)}>
-				<Flex sx={Styles.headerContainer}>
-					<h3 sx={Styles.title}>{info.title}</h3>
-					<time sx={Styles.date} dateTime={info.date.toISOString()}>{info.date.toLocaleDateString()}</time>
-				</Flex>
-				<p sx={Styles.excerpt}>{info.excerpt}</p>
+			<Image fluid={fluid} sx={{...Styles.image, ...imageSx}}/>
+			<div sx={{...Styles.infoContainer, ...infoSx}}>
+				<h3 sx={Styles.title}>{info.title}</h3>
+				<time sx={Styles.date} dateTime={info.date.toISOString()}>{info.date.toLocaleDateString()}</time>
 			</div>
 		</Link>
 	</div>

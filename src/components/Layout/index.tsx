@@ -7,7 +7,7 @@ import Sidebar from 'react-sidebar';
 
 /* 1st party imports */
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+//import Footer from '@/components/Footer';
 import Styles from '@/components/Layout/styles';
 import Menu from '@/components/Menu';
 
