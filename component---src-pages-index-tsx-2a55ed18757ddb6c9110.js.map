@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/index.tsx"],"names":["Index"],"mappings":"2FAAA,uBAGeA,YAAf","file":"component---src-pages-index-tsx-2a55ed18757ddb6c9110.js","sourcesContent":["/* 1st party imports */\nimport Index from '@/pages/Index';\n\nexport default Index;"],"sourceRoot":""}

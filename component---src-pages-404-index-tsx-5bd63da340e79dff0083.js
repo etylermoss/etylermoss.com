@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{GEoZ:function(t,n,e){"use strict";e.r(n);var c=e("2A+t"),o=e("VXBa"),u=e("6o60"),i={container:{textAlign:"center"}};n.default=function(){return Object(c.c)(o.a,null,Object(c.c)(u.a,{title:"404: Not found"}),Object(c.c)("div",{sx:i.container},Object(c.c)("h1",null,"404: NOT FOUND"),Object(c.c)("p",null,"You just hit a route that doesn't exist... I'm sorry :(")))}}}]);
-//# sourceMappingURL=component---src-pages-404-index-tsx-5bd63da340e79dff0083.js.map
