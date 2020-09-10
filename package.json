@@ -51,11 +51,11 @@
   "license": "0BSD",
   "scripts": {
     "build": "npm run type-check && gatsby build",
-    "develop": "npm run type-check && gatsby develop",
+    "develop": "npm run type-check && gatsby develop --host=0.0.0.0",
     "deploy": "npm run type-check && gatsby build --prefix-paths && gh-pages -d public",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve --host=0.0.0.0",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "tsc --noEmit"
