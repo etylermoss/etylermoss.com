@@ -29,4 +29,17 @@ const title: SxStyleProp = {
 	},
 }
 
-export default { portrait, portraitDark, greetings, title };
+const clearFloat: SxStyleProp = {
+	clear: 'both',
+}
+
+const featuredPostHeader: SxStyleProp = {
+	margin: '4em 0 0.25em 0',
+}
+
+const featuredPost: SxStyleProp = {
+	maxWidth: '32em',
+	backgroundColor: 'primary',
+}
+
+export default { portrait, portraitDark, greetings, title, clearFloat, featuredPostHeader, featuredPost };

@@ -2,27 +2,25 @@
 /* 3rd party imports */
 import { FunctionComponent } from 'react';
 import { jsx, Flex } from 'theme-ui';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 
 /* 1st party imports */
 import Layout from '@/components/Layout';
 import SEO from '@/components/SEO';
-import Styles from '@/templates/Posts/styles';
+import Styles from '@/templates/Post/styles';
 
 interface Query {
-	data: {
-		markdownRemark: {
-			frontmatter: {
-				slug: string,
-				title: string,
-				date: string,
-			},
-			html: string,
-		}
+	markdownRemark: {
+		frontmatter: {
+			slug: string,
+			title: string,
+			date: string,
+		},
+		html: string,
 	}
 }
 
-const Template: FunctionComponent<Query> = ({ data }) => {
+const Template: FunctionComponent<PageProps<Query>> = ({ data }) => {
 	const { markdownRemark } = data;
 	const { frontmatter, html } = markdownRemark;
 	const date = new Date(frontmatter.date);
@@ -33,7 +31,7 @@ const Template: FunctionComponent<Query> = ({ data }) => {
 			<article>
 				<Flex sx={Styles.header}>
 					<h1 sx={Styles.headerTitle}>{frontmatter.title}</h1>
-					<time sx={Styles.headerTime} dateTime={date.toISOString()}>{new Date(frontmatter.date).toLocaleDateString()}</time>
+					<time sx={Styles.headerTime} dateTime={date.toISOString()}>{date.toLocaleDateString()}</time>
 				</Flex>
 				<div dangerouslySetInnerHTML={{ __html: html }} />
 			</article>

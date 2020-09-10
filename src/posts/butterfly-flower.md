@@ -1,13 +1,11 @@
 ---
-slug: "first-post"
-date: 2020-09-09
-title: "How I built this website."
-featured: true
-featuredImage: moorland.png
+slug: "butterfly-flower"
+date: 2020-09-10
+title: "Interesting flower I photographed."
+featured: false
+featuredImage: butterfly-flower.jpg
 ---
-This is my first post on my new website, so I thought I'd use it as an opportunity to explain how exactly
-I built the site in the first place.<!-- excerpt --> I'm also using this post as a bit of a test, since as of
-writing I haven't finished the site yet.
+Here I document an interesting flower that I found by a reservoir.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
 magna aliqua. Dictum sit amet justo donec enim diam vulputate ut. Amet est placerat in egestas erat imperdiet
@@ -19,14 +17,3 @@ Iaculis nunc sed augue lacus viverra vitae congue eu consequat. Quisque id diam 
 mauris sit amet massa. Nisl nunc mi ipsum faucibus vitae. Mi ipsum faucibus vitae aliquet nec ullamcorper sit.
 Cras sed felis eget velit aliquet sagittis id consectetur purus. Netus et malesuada fames ac turpis egestas
 integer. Interdum consectetur libero id faucibus nisl tincidunt eget. Urna neque viverra justo nec.
-
-#### The real magic: ####
-
-```
-for (let x=0; x<y; x++) {
-	DoStuff();
-}
-```
-
-Orci dapibus ultrices in iaculis nunc sed augue lacus. Ullamcorper morbi tincidunt ornare massa eget egestas.
-Vulputate sapien nec sagittis aliquam malesuada bibendum.

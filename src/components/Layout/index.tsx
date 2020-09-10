@@ -29,7 +29,7 @@ const Component: FunctionComponent = ({ children }) => {
 				<div sx={Styles.contentContainer}>
 					{children}
 				</div>
-				<Footer/>
+				{/* <Footer/> */}
 			</div>
 		</Flex>
 	)

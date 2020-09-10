@@ -13,11 +13,16 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-offline',
 		'gatsby-plugin-typescript',
-		'gatsby-transformer-remark',
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
 		'gatsby-plugin-cname',
 		'gatsby-plugin-theme-ui',
+		{
+			resolve: 'gatsby-transformer-remark',
+			options: {
+				excerpt_separator: '<!-- excerpt -->',
+			},
+		},
 		{
 			resolve: 'gatsby-plugin-page-creator',
 			options: {
@@ -66,6 +71,6 @@ module.exports = {
 					'@': path.resolve(__dirname, 'src'),
 				},
 			},
-		}
+		},
 	],
 }
