@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
 	siteMetadata: {
 		title: 'Eden Tyler-Moss',
-		description: 'My portfolio website.',
+		description: 'My website, built with Gatsby & TypeScript.',
 		author: 'Eden Tyler-Moss',
 		email: 'eden@etylermoss.com',
 		mobile: '+44 (0)7460 195524',
@@ -47,7 +47,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				name: 'Eden Tyler-Moss - My website',
+				name: 'Eden Tyler-Moss',
 				short_name: 'etylermoss.com',
 				start_url: '/',
 				background_color: '#9696F3',

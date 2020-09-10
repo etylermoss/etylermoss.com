@@ -1,7 +1,7 @@
 {
   "name": "etylermoss.com",
   "private": true,
-  "description": "Eden Tyler-Moss - My website, built with Gatsby & TypeScript",
+  "description": "My website, built with Gatsby & TypeScript.",
   "version": "0.1.0",
   "author": "Eden Tyler-Moss <eden@etylermoss.com>",
   "dependencies": {
@@ -62,9 +62,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/etylermoss/etylermoss.com"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/etylermoss/etylermoss.com/issues"
   }
 }
